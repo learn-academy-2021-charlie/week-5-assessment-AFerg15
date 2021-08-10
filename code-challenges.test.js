@@ -18,13 +18,13 @@
 // --------------------1) Create a function that takes in a string and returns a coded message. The coded message converts 'a' to 4, 'e' to 3, 'i' to 1, and 'o' to 0.
 
 // a) Create a test with an expect statement using the variables provided.
-// describe("encoder", () => {
-//     it("takes in a string and returns a coded message", () => {
-//         expect(encoder(secretCodeWord1)).toEqual("L4ck4d41s1c4l")
-//         expect(encoder(secretCodeWord2)).toEqual("G0bbl3dyg00k")
-//         expect(encoder(secretCodeWord3)).toEqual("3cc3ntr1c")
-//     })
-// })
+describe("encoder", () => {
+    it("takes in a string and returns a coded message", () => {
+        expect(encoder(secretCodeWord1)).toEqual("L4ck4d41s1c4l")
+        expect(encoder(secretCodeWord2)).toEqual("G0bbl3dyg00k")
+        expect(encoder(secretCodeWord3)).toEqual("3cc3ntr1c")
+    })
+})
 
 var secretCodeWord1 = "Lackadaisical"
 // Expected output: "L4ck4d41s1c4l"
@@ -108,14 +108,14 @@ var secretCodeWord3 = "Eccentric"
 // }
 // console.log(encoder(secretCodeWord1))
 //noop
-// const encoder = (string) => {
-//     let array = string.split("")
-//     for(let i = 0; i<array.length; i++){
-//         array[i] = array[i].replace('a', '4')
-//         array[i] = array[i].replace('i', '1')
-//     }
-//     return array
-// }
+const encoder = (string) => {
+    let array = string.split("")
+    for(let i = 0; i<array.length; i++){
+        array[i] = array[i].replace('a', '4')
+        array[i] = array[i].replace('i', '1')
+    }
+    return array.join("")
+}
 // console.log(encoder(secretCodeWord1))
 // [
 //     'L', '4', 'c', 'k',
